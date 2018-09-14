@@ -1,4 +1,5 @@
 LOCAL_PATH:= $(call my-dir)
+ifeq ($(ENABLE_SYSTEM_SU),true)
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := -Wall -Werror
@@ -10,3 +11,4 @@ LOCAL_MODULE:= su
 LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
 
 include $(BUILD_EXECUTABLE)
+endif
